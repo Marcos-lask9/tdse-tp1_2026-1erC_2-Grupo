@@ -7,13 +7,25 @@ Para facilitar la interacción con el usuario, el tótem tiene una pantalla LCD,
 # Implementación de la Parking Ticket Dispenser Machine (Entry)
 
 Para llevar a cabo la simulación y el desarrollo del firmware de este equipo, la implementación se basará en una Estructura de Aplicación Modular dividida en tres partes funcionales: escrutar (*Scrutinize*), procesar (*Process*) y actuar (*Act*). Estos módulos operan mediante ejecución periódica para garantizar una respuesta en tiempo real:
+
+
 **Módulo Sensor** (escrutar): Se encarga de revisar constantemente el entorno y capturar las señales de entrada. Para simular el funcionamiento en el entorno de desarrollo, los sensores reales del equipo comercial (como la cámara, el botón y la bobina sensora) se deben reemplazar por pulsadores o interruptores, los cuales actúan como entradas digitales (*Digital Inputs*).
+
+
 **Módulo System** (procesar): Este bloque actúa como el núcleo lógico. Toma la información recolectada por el módulo sensor, procesa los datos basándose en el diagrama de estados del sistema y determina qué órdenes deben ejecutarse a continuación.
+
+
 **Módulo Actuator** (actuar): Es el responsable de ejecutar las respuestas físicas del equipo. Para la simulación, los actuadores reales de la máquina (que incluyen la pantalla, la impresora, la barrera y el servidor) se reemplazan por LEDs, funcionando como salidas digitales (*Digital Outputs*) para indicar visualmente la activación de cada componente.
 
 # Modelos de comportamiento para los módulos de código C
 
 Para describir el comportamiento del código C del tipo temporizado (Update by Time Code, period = 1mS), la lógica se modela estructurando el sistema en los siguientes tres Diagramas de Estado (*Statecharts*):
+
+
 Para escrutar → **Sensor**: Se utiliza el modelo Sensor Statechart, encargado de adquirir los eventos desde las entradas digitales (pulsadores y llaves On/Off) para enviar los mensajes correspondientes.
+
+
 Para procesar → **System**: Se utiliza el modelo System Statechart, encargado de recibir los mensajes de los sensores, procesar el estado de la máquina y sincronizar las respuestas del equipo.
+
+
 Para actuar → **Actuator**: Se utiliza el modelo Actuator Statechart, encargado de recibir las órdenes del sistema y ejecutar el comportamiento no bloqueante sobre las salidas digitales (LEDs).
