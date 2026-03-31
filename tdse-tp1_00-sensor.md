@@ -1,6 +1,6 @@
 # Módulo Sensor: Diagrama de Estado y Modelado
 
-## 1. Eventos y Acciones 
+## Eventos y Acciones 
 
 Para el modelado del sensor (un solo botón) de la *Parking Ticket Dispenser Machine*, se utilizará la siguiente convención de identificadores y elementos, ejecutados cíclicamente cada 1mS:
 
