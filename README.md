@@ -1,9 +1,6 @@
-# tdse-tp1_2026-1erC_2-Grupo
-# FIUBA - Electrónica - Taller de Sistemas Embebidos - Trabajo Práctico N°: 1 – Diagramas de Estado - Modelado
-
 # FIUBA - Electrónica - Taller de Sistemas Embebidos
 ## Trabajo Práctico N°: 1 - Diagramas de Estado - Modelado
-### 2026-1erC - 2-Grupo
+### 2026-1erC 2-02
 ### Responsable de la entrega: 
 | Padrón | Apellidos, Nombres     | Fecha     | Deadline  |
 | :----- | :--------------------- | :------:  | :-------: |
